@@ -20,21 +20,42 @@ namespace middleware_edit.Controllers
         {
             _logger = logger;
         }
-
+        [HttpGet]
         public IActionResult Index()
         {
             var customerList =  CustomerContext.customerModelList;
             return View(customerList);
         }
-        public IActionResult Privacy()
+        [HttpGet]
+        public IActionResult Create()
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult CreateWithForm()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            string firstName = HttpContext.Request.Form["firstName"].ToString();
+            string lastName = HttpContext.Request.Form["lastName"].ToString();
+            int age = int.Parse(HttpContext.Request.Form["age"].ToString());
+
+            var lastCustomer = CustomerContext.customerModelList.Last();
+
+
+            var id = lastCustomer.Id + 1;
+
+            CustomerContext.customerModelList.Add(new CustomerModel {
+                Id = id,
+                FirstName = firstName,
+                LastName = lastName,
+                Age = age
+            
+            });
+
+
+
+            return RedirectToAction("Index");
         }
+      
+       
     }
 }

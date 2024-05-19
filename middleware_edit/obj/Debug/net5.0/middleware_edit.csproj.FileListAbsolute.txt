@@ -19,7 +19,6 @@ C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\middleware_edit.TagHelpers.output.cache
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\middleware_edit.RazorCoreGenerate.cache
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -41,6 +40,7 @@ C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\middleware_edit.genruntimeconfig.cache
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\ref\middleware_edit.dll
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\middlewa.503096BD.Up2Date
-C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\HMD.cshtml.g.cs
-C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
-C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Product\Product.cshtml.g.cs
+C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\bin\Debug\net5.0\package-lock.json
+C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\bin\Debug\net5.0\package.json
+C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\bin\Debug\net5.0\libman.json
+C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Home\Create.cshtml.g.cs

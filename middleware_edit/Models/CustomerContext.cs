@@ -6,9 +6,9 @@ namespace middleware_edit.Models
     {
         public static List<CustomerModel> customerModelList = new List<CustomerModel>
         {
-            new CustomerModel(){CustomerId = 1,FirstName  ="Yusuf",LastName="Erduran",Age = 24},
-            new CustomerModel(){CustomerId = 2,FirstName  ="HMD",LastName="SS",Age = 24},
-            new CustomerModel(){CustomerId = 3,FirstName  ="HMD",LastName="SS",Age = 24},
+            new CustomerModel(){Id = 1,FirstName  ="HT",LastName="T",Age = 22},
+            new CustomerModel(){Id = 2,FirstName  ="HMD",LastName="SS",Age = 24},
+            new CustomerModel(){Id = 3,FirstName  ="F",LastName="C",Age = 24},
         };
     }
 }
