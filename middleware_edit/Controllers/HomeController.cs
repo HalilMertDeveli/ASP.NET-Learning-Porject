@@ -55,7 +55,18 @@ namespace middleware_edit.Controllers
 
             return RedirectToAction("Index");
         }
-      
-       
+        [HttpGet]
+        public IActionResult Remove(int id)
+        {
+            var removeCustomer = CustomerContext.customerModelList.Find(c => c.Id == id);
+            if (removeCustomer != null)
+            {
+                CustomerContext.customerModelList.Remove(removeCustomer);
+            }
+            return RedirectToAction("Index");
+        }
+
+
+
     }
 }

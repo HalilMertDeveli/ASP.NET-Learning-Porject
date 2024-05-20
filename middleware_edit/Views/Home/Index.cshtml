@@ -1,12 +1,8 @@
-﻿@model List<middleware_edit.Models.CustomerModel>
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html>
 <head>
-    <title>Table</title>
-    @* <link href="~/css/style.css" rel="stylesheet" /> *@
-
-    @* <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" /> *@
-    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
-
+    <title>Customer List</title>
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css" />
 </head>
 <body>
     <div class="container">
@@ -17,6 +13,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Age</th>
+                <th>Actions</th>
             </tr>
             @foreach (var item in Model)
             {
@@ -27,17 +24,11 @@
                     <td>@item.Age</td>
                     <td>
                         <a href="/Home/Update/@item.Id">Update</a>
-                        <a href="/Home/Delete/@item.Id">Delete</a>
+                        <a href="/Home/Remove/@item.Id">Delete</a> @* it gives id to home controller and link between them *@
                     </td>
-
                 </tr>
             }
-
         </table>
     </div>
-
-
-
 </body>
 </html>
-
