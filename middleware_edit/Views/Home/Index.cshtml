@@ -1,14 +1,11 @@
-﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
-@model List<Customer>
-@using middleware_edit.Models
+﻿@model List<Customer>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Customer List</title>
-    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css" />
-</head>
 <body>
+   
+
     <div class="container">
         <h3>Customer List</h3>
         <a asp-controller="Home" asp-action="Create" >Ekle</a>
@@ -34,5 +31,5 @@
             }
         </table>
     </div>
+
 </body>
-</html>
