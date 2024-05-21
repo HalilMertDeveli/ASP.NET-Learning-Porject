@@ -29,37 +29,29 @@ namespace middleware_edit.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            return View(new Customer());
         }
         [HttpPost]
-        public IActionResult CreateWithForm()
+        public IActionResult Create(Customer customer)
         {
-            string firstName = HttpContext.Request.Form["firstName"].ToString();
-            string lastName = HttpContext.Request.Form["lastName"].ToString();
-            int age = int.Parse(HttpContext.Request.Form["age"].ToString());
+            //string firstName = HttpContext.Request.Form["firstName"].ToString();
+            //string lastName = HttpContext.Request.Form["lastName"].ToString();
+            //int age = int.Parse(HttpContext.Request.Form["age"].ToString());
 
-            CustomerModel lastCustomer = null;
+            Customer lastCustomer = null;
 
             if (CustomerContext.Customers.Count >0)
             {
                 lastCustomer = CustomerContext.Customers.Last();
             }
-            int id =1;
+            customer.Id =1;
 
             if (lastCustomer != null)
             {
-                id = lastCustomer.Id + 1;
+                customer.Id = lastCustomer.Id + 1;
             }
 
-
-
-            CustomerContext.Customers.Add(new CustomerModel {
-                Id = id,
-                FirstName = firstName,
-                LastName = lastName,
-                Age = age
-            
-            });
+            CustomerContext.Customers.Add(customer);
 
 
 
@@ -83,14 +75,17 @@ namespace middleware_edit.Controllers
             return View(willUpdateCustomer);
         }
         [HttpPost]
-        public IActionResult UpdateCustomer()
+        public IActionResult Update(Customer customer)
         {
-            var id = int.Parse(HttpContext.Request.Form["id"].ToString());
-            var willUpdateCustomer = CustomerContext.Customers.FirstOrDefault(I => I.Id == id);
-            willUpdateCustomer.FirstName = HttpContext.Request.Form["firstName"].ToString();
-            willUpdateCustomer.LastName = HttpContext.Request.Form["lastName"].ToString();
-            willUpdateCustomer.Age = int.Parse(HttpContext.Request.Form["age"].ToString());
+            //var id = int.Parse(HttpContext.Request.Form["id"].ToString());
+            var willUpdateCustomer = CustomerContext.Customers.FirstOrDefault(I => I.Id == customer.Id);
+            //willUpdateCustomer.FirstName = HttpContext.Request.Form["firstName"].ToString();
+            //willUpdateCustomer.LastName = HttpContext.Request.Form["lastName"].ToString();
+            //willUpdateCustomer.Age = int.Parse(HttpContext.Request.Form["age"].ToString());
 
+            willUpdateCustomer.FirstName = customer.FirstName;
+            willUpdateCustomer.LastName = customer.LastName;
+            willUpdateCustomer.Age = customer.Age;
 
 
             return RedirectToAction("Index");

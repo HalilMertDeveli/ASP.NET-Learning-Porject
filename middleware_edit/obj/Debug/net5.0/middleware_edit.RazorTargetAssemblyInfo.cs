@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyProductAttribute("middleware_edit")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8b76d85388742aa52d49563f16fc37fea3622a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edc93b31af660323d60aec90bb9c1e34ca095699")]
 [assembly: System.Reflection.AssemblyTitleAttribute("middleware_edit.Views")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 

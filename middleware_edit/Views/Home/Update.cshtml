@@ -1,6 +1,6 @@
 ﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 @using middleware_edit.Models
-@model CustomerModel
+@model Customer
 <html>
 <head>
     <title>Update Customer</title>
@@ -11,21 +11,21 @@
         <h3>Update Customer</h3>
         @if (Model != null)
         {
-            <form asp-controller="Home" asp-action="UpdateCustomer" method="post">
-                <input type="hidden" name="id" value="@Model.Id" /> @* we wrote this but not show the use  *@
+            <form asp-controller="Home" asp-action="Update" method="post">
+                <input  type="hidden" name="id" value="@Model.Id" /> @* we wrote this but not show the use  *@
                 <div class="form-group">
                     <label>first name: </label>
-                    <input type="text" name="firstName" class="form-control" value="@Model.FirstName" />
+                    <input  class="form-control"  asp-for="@Model.FirstName"/>
                 </div>
 
                 <div class="form-group">
                     <label>Last name: </label>
-                    <input type="text" name="lastName" class="form-control" value="@Model.LastName" />
+                    <input class="form-control" asp-for="@Model.LastName"/>
                 </div>
 
                 <div class="form-group">
                     <label>Age:  </label>
-                    <input type="text" name="Age" class="form-control" value="@Model.Age" />
+                    <input  class="form-control" asp-for="@Model.Age"/>
                 </div>
                 <div class="form-group">
                     <label>Submit</label>
