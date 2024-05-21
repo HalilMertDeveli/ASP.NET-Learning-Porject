@@ -1,4 +1,6 @@
-﻿@model middleware_edit.Models.CustomerModel
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using middleware_edit.Models
+@model CustomerModel
 <html>
 <head>
     <title>Update Customer</title>
@@ -9,7 +11,7 @@
         <h3>Update Customer</h3>
         @if (Model != null)
         {
-            <form action="/Home/UpdateCustomer" method="post">
+            <form asp-controller="Home" asp-action="UpdateCustomer" method="post">
                 <input type="hidden" name="id" value="@Model.Id" /> @* we wrote this but not show the use  *@
                 <div class="form-group">
                     <label>first name: </label>
