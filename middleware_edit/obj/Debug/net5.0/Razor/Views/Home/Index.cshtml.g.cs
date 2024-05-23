@@ -26,8 +26,15 @@ using middleware_edit.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\Views\_ViewImports.cshtml"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"04e2e01362042e73e0e5d8f3e800348c1344bb80053436b37b6377da07297015", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"d1aa58678dec06cc7ab1028c55049405ab10c43452ee433322c89a841ec8a015", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"0227c588c46cf9a6ab0da952170d2c0329fde883468dd915dde6d32cb83dd9eb", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Customer>>
     #nullable disable
@@ -70,9 +77,9 @@ using middleware_edit.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04e2e01362042e73e0e5d8f3e800348c1344bb80053436b37b6377da072970155003", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04e2e01362042e73e0e5d8f3e800348c1344bb80053436b37b6377da072970155229", async() => {
                 WriteLiteral("\r\n   \r\n\r\n    <div class=\"container\">\r\n        <h3>Customer List</h3>\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04e2e01362042e73e0e5d8f3e800348c1344bb80053436b37b6377da072970155371", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04e2e01362042e73e0e5d8f3e800348c1344bb80053436b37b6377da072970155597", async() => {
                     WriteLiteral("Ekle");
                 }
                 );
@@ -131,7 +138,7 @@ using middleware_edit.Models;
 #line hidden
 #nullable disable
                 WriteLiteral("</td>\r\n                    <td>\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04e2e01362042e73e0e5d8f3e800348c1344bb80053436b37b6377da072970158707", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04e2e01362042e73e0e5d8f3e800348c1344bb80053436b37b6377da072970158933", async() => {
                     WriteLiteral("Update");
                 }
                 );
@@ -164,7 +171,7 @@ using middleware_edit.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04e2e01362042e73e0e5d8f3e800348c1344bb80053436b37b6377da0729701511292", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04e2e01362042e73e0e5d8f3e800348c1344bb80053436b37b6377da0729701511518", async() => {
                     WriteLiteral("Delete");
                 }
                 );

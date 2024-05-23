@@ -26,8 +26,15 @@ using middleware_edit.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\Views\_ViewImports.cshtml"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c89", @"/Views/Home/Update.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"d1aa58678dec06cc7ab1028c55049405ab10c43452ee433322c89a841ec8a015", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"0227c588c46cf9a6ab0da952170d2c0329fde883468dd915dde6d32cb83dd9eb", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Home_Update : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Customer>
     #nullable disable
@@ -72,7 +79,7 @@ using middleware_edit.Models;
 #line default
 #line hidden
 #nullable disable
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c895328", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c895554", async() => {
                 WriteLiteral("\r\n    <div class=\"container\">\r\n        <h3>Update Customer</h3>\r\n");
 #nullable restore
 #line 9 "C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\Views\Home\Update.cshtml"
@@ -83,7 +90,7 @@ using middleware_edit.Models;
 #line hidden
 #nullable disable
                 WriteLiteral("            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c895973", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c896199", async() => {
                     WriteLiteral("\r\n                <input  type=\"hidden\" name=\"id\"");
                     BeginWriteAttribute("value", " value=\"", 307, "\"", 324, 1);
 #nullable restore
@@ -96,7 +103,7 @@ WriteAttributeValue("", 315, Model.Id, 315, 9, false);
                     EndWriteAttribute();
                     WriteLiteral(" /> ");
                     WriteLiteral("\r\n                <div class=\"form-group\">\r\n                    <label>first name: </label>\r\n                    ");
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c896906", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c897132", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -118,7 +125,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                     Write(__tagHelperExecutionContext.Output);
                     __tagHelperExecutionContext = __tagHelperScopeManager.End();
                     WriteLiteral("\r\n                </div>\r\n\r\n                <div class=\"form-group\">\r\n                    <label>Last name: </label>\r\n                    ");
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c898756", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c898982", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -140,7 +147,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                     Write(__tagHelperExecutionContext.Output);
                     __tagHelperExecutionContext = __tagHelperScopeManager.End();
                     WriteLiteral("\r\n                </div>\r\n\r\n                <div class=\"form-group\">\r\n                    <label>Age:  </label>\r\n                    ");
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c8910600", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a845a3ebf18d40394ea9cca218390600cd017999377d36d3f0c4c28aaa025c8910826", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
