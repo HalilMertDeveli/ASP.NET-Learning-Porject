@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.IO;
 
 namespace middleware_edit.Controllers
@@ -27,6 +29,31 @@ namespace middleware_edit.Controllers
             }
 
             return RedirectToAction("List");
+        }
+        public IActionResult CreateWithData()
+        {
+            FileInfo fileInfo = new FileInfo(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot","files", Guid.NewGuid().ToString() + ".txt"));
+
+            StreamWriter writer = fileInfo.CreateText();
+            writer.Write("HMDSS");
+
+            writer.Close();
+
+            return RedirectToAction("List");
+        }
+        public IActionResult Upload()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Upload(IFormFile formFile)
+        {
+            var ext = Path.GetExtension(formFile.FileName);
+            var path = Directory.GetCurrentDirectory() + "/wwwroot" + "/images/" + Guid.NewGuid() + ext;
+            FileStream stream = new FileStream(path, FileMode.Create);
+            formFile.CopyTo(stream);
+
+            return RedirectToAction("Upload");
         }
     }
 }

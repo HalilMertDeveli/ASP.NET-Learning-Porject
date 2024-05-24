@@ -1,10 +1,10 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<form asp-action="Create" method="post">
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label>Dosya  ismi</label>
-        <input type="text" name="fileName" class="form-control" />
+        <label for="fromFile">Dosya  ismi</label>
+        <input id="formFile" type="file" name="formFile" class="form-control" />
     </div>
 
     <div class="form-group text-right">

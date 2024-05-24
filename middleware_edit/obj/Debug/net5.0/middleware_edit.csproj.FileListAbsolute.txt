@@ -51,3 +51,4 @@ C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\File\List.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\File\Create.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\wwwroot\files\HMD.cshtml.g.cs
+C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\File\Upload.cshtml.g.cs
