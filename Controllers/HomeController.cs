@@ -41,6 +41,39 @@ namespace RepeatOperationForAspNet.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public IActionResult Remove(int StudentId)
+        {
+
+            var willRemoveStudent = StudentContext.studentList.Find(studentInstance => studentInstance.StudentId == StudentId);
+            
+            if (willRemoveStudent != null)
+            {
+                StudentContext.studentList.Remove(willRemoveStudent);
+            }
+            return RedirectToAction("Index");
+
+        }
+        [HttpGet]
+        public  IActionResult Update(int studentId)
+        {
+            Student willUpdateStudent = StudentContext.studentList.FirstOrDefault(studentInstance => studentInstance.StudentId == studentId);
+
+            return View(willUpdateStudent);
+        }
+        [HttpPost]
+        public IActionResult Update()
+        {
+            var id = int.Parse(HttpContext.Request.Form["studentId"].ToString());
+            var willUpdateStudent = StudentContext.studentList.Find(studentInstance => studentInstance.StudentId == id);
+
+            willUpdateStudent.StudentName = HttpContext.Request.Form["studentName"].ToString();
+            willUpdateStudent.StudentLastName = HttpContext.Request.Form["studentLastName"].ToString();
+            willUpdateStudent.StudentGrade = int.Parse(HttpContext.Request.Form["studentGrade"].ToString());
+
+
+            return RedirectToAction("Index");
+        }
 
 
 

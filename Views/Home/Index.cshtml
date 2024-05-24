@@ -17,6 +17,7 @@
         <table class="table table-hover table-bordered">
             <thead>
                 <tr>
+                    <th>Student ID</th>
                     <th>Student Name</th>
                     <th>Student Last Name</th>
                     <th>Student Age</th>
@@ -33,8 +34,9 @@
                     <td>@student.StudentLastName</td>
                     <td>@student.StudentGrade</td>
                     <td>
-                        <a href="/Home/Update/@student.StudentId">Update Student</a>
-                        <a href="/Home/Delete/@student.StudentId">Delete Student</a>
+
+                        <a href="@Url.Action("Update", "Home", new { studentId = student.StudentId })">Update </a>
+                        <a href="@Url.Action("Remove", "Home", new { studentId = student.StudentId })">Remove </a>
                     </td>
                 </tr>
             }
