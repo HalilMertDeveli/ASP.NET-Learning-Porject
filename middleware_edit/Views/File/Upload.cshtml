@@ -1,6 +1,15 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@{
+    if(TempData["message"] != null)
+    {
+        <div class="bg-primary text-white text-center lead">
+            @TempData["message"]    
+
+        </div>
+    } 
+}
 <form asp-action="Upload" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="fromFile">Dosya  ismi</label>
