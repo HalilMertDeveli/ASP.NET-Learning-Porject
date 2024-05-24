@@ -5,28 +5,44 @@ using System.Diagnostics;
 namespace RepeatOperationForAspNet.Controllers
 {
     public class HomeController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+    {   
         public IActionResult Index()
         {
-            return View();
+            List<Student> studentList = StudentContext.studentList;
+            
+            return View(studentList);
         }
-
-        public IActionResult Privacy()
+        public IActionResult Create()
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult CreateNewStudent()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            string formStudentFirstName = HttpContext.Request.Form["studentName"].ToString();
+            string formStudentLastName = HttpContext.Request.Form["studentLastName"].ToString();
+            int formStudentGrade = int.Parse(HttpContext.Request.Form["studentGrade"].ToString());
+
+            Student lastStudent = StudentContext.studentList.Last();
+
+            int lastStudentId = lastStudent.StudentId +1;
+
+
+
+            StudentContext.studentList.Add(new Student()
+            {
+                StudentId = lastStudentId,
+                StudentName = formStudentFirstName,
+                StudentLastName = formStudentLastName,
+                StudentGrade = formStudentGrade,
+
+            });
+            
+
+            return RedirectToAction("Index");
         }
+
+
+
     }
 }

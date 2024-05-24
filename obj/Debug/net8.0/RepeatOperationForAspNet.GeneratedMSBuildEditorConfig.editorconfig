@@ -18,12 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\RepeatOperationForAspNet\RepeatOperationForAspNet
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/halil/source/repos/database_programming_week_seven/udemy_asp/RepeatOperationForAspNet/RepeatOperationForAspNet/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/halil/source/repos/database_programming_week_seven/udemy_asp/RepeatOperationForAspNet/RepeatOperationForAspNet/Views/Home/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/halil/source/repos/database_programming_week_seven/udemy_asp/RepeatOperationForAspNet/RepeatOperationForAspNet/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/halil/source/repos/database_programming_week_seven/udemy_asp/RepeatOperationForAspNet/RepeatOperationForAspNet/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/halil/source/repos/database_programming_week_seven/udemy_asp/RepeatOperationForAspNet/RepeatOperationForAspNet/Views/Shared/Error.cshtml]
