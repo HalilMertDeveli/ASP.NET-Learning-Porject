@@ -12,5 +12,21 @@ namespace middleware_edit.Controllers
             var files = directoryInfo.GetFiles();
             return View(files);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(string fileName)
+        {
+            FileInfo fileInfo = new FileInfo(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "files",fileName));
+
+            if (!fileInfo.Exists)
+            {
+                fileInfo.Create();
+            }
+
+            return RedirectToAction("List");
+        }
     }
 }
