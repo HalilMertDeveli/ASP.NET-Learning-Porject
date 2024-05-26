@@ -1,0 +1,22 @@
+﻿@model FileInfo[]
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <td>File Name</td>
+            <td>Fİle Creation Time</td>
+            <td>File DirectoryName</td>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.CreationTime</td>
+                <td>@item.DirectoryName</td>
+            </tr>
+        }
+    </tbody>
+    <a asp-action="Create" asp-controller="File" class="btn btn-dark">Create new File</a>
+</table>

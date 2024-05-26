@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bbdY2rqh5BPtNAJ42cjxkSwsZBvKAnu4Xbnv5/4Wyd8=",
+  "Hash": "NyiLZONX46xPKG1Uxs4aMI+j0qhwc620KZtvsyIsGoc=",
   "Source": "RepeatOperationForAspNet",
   "BasePath": "_content/RepeatOperationForAspNet",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\halil\\source\\repos\\database_programming_week_seven\\udemy_asp\\RepeatOperationForAspNet\\RepeatOperationForAspNet\\wwwroot\\HMD\\hmd.cs",
+      "SourceId": "RepeatOperationForAspNet",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\halil\\source\\repos\\database_programming_week_seven\\udemy_asp\\RepeatOperationForAspNet\\RepeatOperationForAspNet\\wwwroot\\",
+      "BasePath": "_content/RepeatOperationForAspNet",
+      "RelativePath": "HMD/hmd.cs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\HMD\\hmd.cs"
     },
     {
       "Identity": "C:\\Users\\halil\\source\\repos\\database_programming_week_seven\\udemy_asp\\RepeatOperationForAspNet\\RepeatOperationForAspNet\\wwwroot\\js\\site.js",

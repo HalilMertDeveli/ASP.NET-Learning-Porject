@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\RepeatOperationForAspNet.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\halil\\source\\repos\\database_programming_week_seven\\udemy_asp\\RepeatOperationForAspNet\\RepeatOperationForAspNet\\wwwroot\\HMD\\hmd.cs",
+      "PackagePath": "staticwebassets\\HMD\\hmd.cs"
+    },
+    {
       "Id": "C:\\Users\\halil\\source\\repos\\database_programming_week_seven\\udemy_asp\\RepeatOperationForAspNet\\RepeatOperationForAspNet\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

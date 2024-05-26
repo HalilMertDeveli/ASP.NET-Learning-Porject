@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\RepeatOperationForAspNet\RepeatOperationForAspNet
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/halil/source/repos/database_programming_week_seven/udemy_asp/RepeatOperationForAspNet/RepeatOperationForAspNet/Views/File/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/halil/source/repos/database_programming_week_seven/udemy_asp/RepeatOperationForAspNet/RepeatOperationForAspNet/Views/File/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/halil/source/repos/database_programming_week_seven/udemy_asp/RepeatOperationForAspNet/RepeatOperationForAspNet/Views/Folder/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9sZGVyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
