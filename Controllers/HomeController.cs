@@ -14,31 +14,33 @@ namespace RepeatOperationForAspNet.Controllers
         }
         public IActionResult Create()
         {
-            return View();
+            return View(new Student());
         }
         [HttpPost]
-        public IActionResult CreateNewStudent()
+        public IActionResult CreateNewStudent(Student student)
         {
 
 
-            string formStudentFirstName = HttpContext.Request.Form["studentName"].ToString();
-            string formStudentLastName = HttpContext.Request.Form["studentLastName"].ToString();
-            int formStudentGrade = int.Parse(HttpContext.Request.Form["studentGrade"].ToString());
-
-            Student lastStudent = StudentContext.studentList.Last();
-
-            int lastStudentId = lastStudent.StudentId +1;
+            //string formStudentFirstName = HttpContext.Request.Form["studentName"].ToString();
+            //string formStudentLastName = HttpContext.Request.Form["studentLastName"].ToString();
+            //int formStudentGrade = int.Parse(HttpContext.Request.Form["studentGrade"].ToString());
 
 
-
-            StudentContext.studentList.Add(new Student()
+            Student lastStudent = null;
+            if (StudentContext.studentList.Count>0)
             {
-                StudentId = lastStudentId,
-                StudentName = formStudentFirstName,
-                StudentLastName = formStudentLastName,
-                StudentGrade = formStudentGrade,
+                lastStudent = StudentContext.studentList.Last();
+            }
 
-            });
+
+            student.StudentId = 1;
+
+            if (lastStudent != null)
+            {
+                student.StudentId = lastStudent.StudentId + 1;
+            }
+
+            StudentContext.studentList.Add(student);
             
 
             return RedirectToAction("Index");

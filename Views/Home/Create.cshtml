@@ -1,4 +1,8 @@
 ﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using RepeatOperationForAspNet.Models
+@model Student
+
+
 
 <html>
 <head>
@@ -14,16 +18,16 @@
         <form asp-controller="Home" asp-action="CreateNewStudent" method="post">
             <div class="form-group">
                 <label>Enter Student Name</label>
-                <input type="text" name="studentName" class="form-control" />
+                <input type="text" name="studentName" class="form-control" asp-for="@Model.StudentName" />
             </div>
 
             <div class="form-group">
                 <label>Enter Student Last Name</label>
-                <input type="text" name="studentLastName" class="form-control" />
+                <input type="text" name="studentLastName" class="form-control"  asp-for="@Model.StudentLastName"/>
             </div>
             <div class="form-group">
                 <label>Enter Student Grade</label>
-                <input type="text" name="studentGrade" class="form-control" />
+                <input type="text" name="studentGrade" class="form-control" asp-for="@Model.StudentGrade" />
             </div>
 
             <div class="from-group text-right">
