@@ -41,11 +41,11 @@ namespace RepeatOperationForAspNet.Controllers
 
             return RedirectToAction("Index");
         }
-        [HttpGet]
-        public IActionResult Remove(int StudentId)
+      
+        public IActionResult Remove(int id)
         {
 
-            var willRemoveStudent = StudentContext.studentList.Find(studentInstance => studentInstance.StudentId == StudentId);
+            var willRemoveStudent = StudentContext.studentList.Find(c => c.StudentId == id);
             
             if (willRemoveStudent != null)
             {
@@ -55,9 +55,9 @@ namespace RepeatOperationForAspNet.Controllers
 
         }
         [HttpGet]
-        public  IActionResult Update(int studentId)
+        public  IActionResult Update(int id)
         {
-            Student willUpdateStudent = StudentContext.studentList.FirstOrDefault(studentInstance => studentInstance.StudentId == studentId);
+            Student willUpdateStudent = StudentContext.studentList.FirstOrDefault(studentInstance => studentInstance.StudentId == id);
 
             return View(willUpdateStudent);
         }

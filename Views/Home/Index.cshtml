@@ -1,19 +1,15 @@
-﻿@model List<RepeatOperationForAspNet.Models.Student>
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+@model List<RepeatOperationForAspNet.Models.Student>
 
-}
 <html>
     <head>
     <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css " rel="stylesheet">
-
-
     </head>
 
     
     <body>
-        <a href="/Home/Create">Add New Student</a>
+        <a asp-controller="Home" asp-action="Create">Add New Student</a>
         <table class="table table-hover table-bordered">
             <thead>
                 <tr>
@@ -26,17 +22,17 @@
             </thead>
 
             <tbody>
-            @foreach(var student in Model)
+            @foreach(var item in Model)
             {
                 <tr>
-                    <td>@student.StudentId</td>
-                    <td>@student.StudentName</td>
-                    <td>@student.StudentLastName</td>
-                    <td>@student.StudentGrade</td>
+                    <td>@item.StudentId</td>
+                    <td>@item.StudentName</td>
+                    <td>@item.StudentLastName</td>
+                    <td>@item.StudentGrade</td>
                     <td>
+                        <a asp-action="Remove" asp-controller="Home" asp-route-id="@item.StudentId" class="btn btn-danger">Remove</a>
+                        <a asp-action="Update" asp-controller="Home" asp-route-id="@item.StudentId" class="btn btn-warning">Update</a>
 
-                        <a href="@Url.Action("Update", "Home", new { studentId = student.StudentId })">Update </a>
-                        <a href="@Url.Action("Remove", "Home", new { studentId = student.StudentId })">Remove </a>
                     </td>
                 </tr>
             }
