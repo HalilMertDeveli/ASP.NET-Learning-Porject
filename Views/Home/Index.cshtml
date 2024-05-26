@@ -1,13 +1,20 @@
 ﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 @using RepeatOperationForAspNet.Models
 @model List<Student>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <html>
     <head>
-    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css " rel="stylesheet">
+
     </head>
 
-    
+
     <body>
+
+
+    
+
         <a asp-controller="Home" asp-action="Create">Add New Student</a>
         <table class="table table-hover table-bordered">
             <thead>
@@ -21,21 +28,25 @@
             </thead>
 
             <tbody>
-            @foreach(var item in Model)
-            {
-                <tr>
-                    <td>@item.StudentId</td>
-                    <td>@item.StudentName</td>
-                    <td>@item.StudentLastName</td>
-                    <td>@item.StudentGrade</td>
-                    <td>
-                        <a asp-action="Remove" asp-controller="Home" asp-route-id="@item.StudentId" class="btn btn-danger">Remove </a>
-                        <a asp-action="Update" asp-controller="Home" asp-route-id="@item.StudentId" class="btn btn-warning">Update </a>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.StudentId</td>
+                        <td>@item.StudentName</td>
+                        <td>@item.StudentLastName</td>
+                        <td>@item.StudentGrade</td>
+                        <td>
+                            <a asp-action="Remove" asp-controller="Home" asp-route-id="@item.StudentId" class="btn btn-danger">Remove </a>
+                            <a asp-action="Update" asp-controller="Home" asp-route-id="@item.StudentId" class="btn btn-warning">Update </a>
 
-                    </td>
-                </tr>
-            }
-        </tbody>
+                        </td>
+                    </tr>
+                }
+            </tbody>
         </table>
+
+        <!-- Remove the container if you want to extend the Footer to full width. -->
+    
+        <!-- End of .container -->
     </body>
 </html>
