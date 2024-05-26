@@ -2,6 +2,9 @@
 
 @using RepeatOperationForAspNet.Models
 @model Student
+
+
+
 <html>
 <head>
     <title>Create new Student</title>
@@ -15,20 +18,20 @@
 
         <form action="/Home/Update" method="post">
             <div class="form-group">
-                <input type="hidden" name="studentId" value="@Model.StudentId" />
+                <input type="hidden" name="studentId" asp-for="@Model.StudentId" />
             </div>
             <div class="form-group">
                 <label>Enter Student Name</label>
-                <input type="text" name="studentName"  class="form-control" value="@Model.StudentName" />
+                <input type="text" name="studentName"  class="form-control" asp-for="@Model.StudentName" />
             </div>
 
             <div class="form-group">
                 <label>Enter Student Last Name</label>
-                <input type="text" name="studentLastName" class="form-control"  value="@Model.StudentLastName"/>
+                <input type="text" name="studentLastName" class="form-control"  asp-for="@Model.StudentLastName"/>
             </div>
             <div class="form-group">
                 <label>Enter Student Grade</label>
-                <input type="text" name="studentGrade" class="form-control" value="@Model.StudentGrade"/>
+                <input type="text" name="studentGrade" class="form-control" asp-for="@Model.StudentGrade"/>
             </div>
 
             <div class="from-group text-right">
