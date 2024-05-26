@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RepeatOperationForAspNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+910de7d0b5f72e650ab81cbb8fc842ad2419f2ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25da835de6ef26b863f56fea6980f813f9bb7538")]
 [assembly: System.Reflection.AssemblyProductAttribute("RepeatOperationForAspNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RepeatOperationForAspNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
