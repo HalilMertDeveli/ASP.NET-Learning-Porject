@@ -20,10 +20,6 @@ namespace RepeatOperationForAspNet.Controllers
         public IActionResult Create(Student student)
         {
 
-
-
-
-
             Student lastStudent = null;
             if (StudentContext.studentList.Count > 0)
             {

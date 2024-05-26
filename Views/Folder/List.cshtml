@@ -1,0 +1,38 @@
+﻿@model DirectoryInfo[]
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Folder List </title>
+</head>
+
+<body>
+    <a asp-action="Create" asp-controller="Folder" class="btn btn-dark">Create new Folder</a>
+    <table class="table table-hover table-bordered">
+
+
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>File Creation Time</th>
+                <th>File Path</th>
+                <th>File Root</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.CreationTime</td>
+                    <td>@item.FullName</td>
+                    <td>@item.Root</td>
+                    <td>
+                        <a asp-action="Remove" asp-controller="Folder" asp-route-folderName="@item.Name">Remove</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

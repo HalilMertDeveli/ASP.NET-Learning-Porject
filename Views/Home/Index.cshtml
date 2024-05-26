@@ -1,9 +1,6 @@
-﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
-@using RepeatOperationForAspNet.Models
+﻿
 @model List<Student>
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+
 <html>
     <head>
 
@@ -45,8 +42,7 @@
             </tbody>
         </table>
 
-        <!-- Remove the container if you want to extend the Footer to full width. -->
-    
-        <!-- End of .container -->
+        <a asp-controller="Folder" asp-action="List" class="btn btn-warning"> Go to the Folder List</a>
+        
     </body>
 </html>
