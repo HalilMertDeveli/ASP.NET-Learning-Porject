@@ -131,3 +131,5 @@ C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\middleware_edit.csproj.AssemblyReference.cache
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\_NewsPartial.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\Components\News\Default.cshtml.g.cs
+C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\Components\News\Blue.cshtml.g.cs
+C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\Components\News\Red.cshtml.g.cs

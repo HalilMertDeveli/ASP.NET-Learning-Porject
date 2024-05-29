@@ -27,14 +27,14 @@ using middleware_edit.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\Views\_ViewImports.cshtml"
+#line 5 "C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\Views\_ViewImports.cshtml"
 using System.IO;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"5dbf98b6b9394ad78206edce40cab1d7a238aa69cfefa41bab0ebc6aa22488aa", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"0227c588c46cf9a6ab0da952170d2c0329fde883468dd915dde6d32cb83dd9eb", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"034120de8f71520af3b23015c05141c342e55b1e8fe2a3952a40a90d0fa74f42", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     #nullable disable
