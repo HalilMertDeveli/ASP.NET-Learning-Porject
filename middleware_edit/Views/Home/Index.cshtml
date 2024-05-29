@@ -5,8 +5,9 @@
 <h3>Customer List</h3>
 <div class="row">
     <div class="col-4">
-        <partial name="_NewsPartial" model="NewsContext.List"></partial>
-    </div>
+        @await Component.InvokeAsync("News");
+@*         <partial name="_NewsPartial" model="NewsContext.List"></partial>
+ *@    </div>
 
     <div class="col-8">
         <div class="container">

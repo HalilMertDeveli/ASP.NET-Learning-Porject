@@ -4,27 +4,44 @@
 
 }
 
+
+
 <a asp-action="Create" > Create</a>
-<table class="table table-hover table-bordered">
-    <thead>
-        <tr>
-            <th>Ad</th>
-            <th>Oluşturulma Tarihi</th>
-            <th>Path</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Name</td>
-                <td>@item.CreationTime</td>
-                <td>@item.FullName</td>
-                <td>
-                    <a asp-action="Remove" asp-route-fileName="@item.Name"> Remove</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+
+<div>
+    <div class="col-4">
+        @await Component.InvokeAsync("News")
+
+        @* <partial name="_NewsPartial" model="NewsContext.List"></partial>
+ *@
+    </div>
+
+    <div class="col-8">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Ad</th>
+                    <th>Oluşturulma Tarihi</th>
+                    <th>Path</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.CreationTime</td>
+                        <td>@item.FullName</td>
+                        <td>
+                            <a asp-action="Remove" asp-route-fileName="@item.Name"> Remove</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
