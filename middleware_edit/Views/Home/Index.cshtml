@@ -2,34 +2,44 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<body>
-   
-
-    <div class="container">
-        <h3>Customer List</h3>
-        <a asp-controller="Home" asp-action="Create" >Ekle</a>
-        <table class="table table-hover table-bordered">
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Age</th>
-                <th>Actions</th>
-            </tr>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.Id</td>
-                    <td>@item.FirstName</td>
-                    <td>@item.LastName</td>
-                    <td>@item.Age</td>
-                    <td>
-                        <a asp-action="Update" asp-controller="Home" asp-route-id="@item.Id">Update</a>
-                        <a asp-action="Remove" asp-controller="Home" asp-route-id="@item.Id">Delete</a> @* it gives id to home controller and link between them *@
-                    </td>
-                </tr>
-            }
-        </table>
+<h3>Customer List</h3>
+<div class="row">
+    <div class="col-4">
+        <partial name="_NewsPartial" model="NewsContext.List"></partial>
     </div>
 
-</body>
+    <div class="col-8">
+        <div class="container">
+
+            <a asp-controller="Home" asp-action="Create">Ekle</a>
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Actions</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.Age</td>
+                        <td>
+                            <a asp-action="Update" asp-controller="Home" asp-route-id="@item.Id">Update</a>
+                            <a asp-action="Remove" asp-controller="Home" asp-route-id="@item.Id">Delete</a> @* it gives id to home controller and link between them *@
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+
+   
+
+
