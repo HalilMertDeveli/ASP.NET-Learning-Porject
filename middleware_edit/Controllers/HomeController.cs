@@ -41,6 +41,11 @@ namespace middleware_edit.Controllers
             var controlState = ModelState.IsValid;
             var errors = ModelState.Values.SelectMany(error => error.Errors.Select(stringT =>stringT.ErrorMessage));
 
+            if (customer.FirstName == "HMD")
+            {
+                ModelState.AddModelError("","First Name coudn't be HMD");
+            }
+
 
             if (controlState == true)
             {
