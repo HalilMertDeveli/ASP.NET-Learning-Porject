@@ -38,24 +38,35 @@ namespace middleware_edit.Controllers
             //string lastName = HttpContext.Request.Form["lastName"].ToString();
             //int age = int.Parse(HttpContext.Request.Form["age"].ToString());
 
-            Customer lastCustomer = null;
+            var controlState = ModelState.IsValid;
+            var errors = ModelState.Values.SelectMany(error => error.Errors.Select(stringT =>stringT.ErrorMessage));
 
-            if (CustomerContext.Customers.Count >0)
+
+            if (controlState == true)
             {
-                lastCustomer = CustomerContext.Customers.Last();
+                Customer lastCustomer = null;
+
+                if (CustomerContext.Customers.Count > 0)
+                {
+                    lastCustomer = CustomerContext.Customers.Last();
+                }
+                customer.Id = 1;
+
+                if (lastCustomer != null)
+                {
+                    customer.Id = lastCustomer.Id + 1;
+                }
+
+                CustomerContext.Customers.Add(customer);
+
+                return RedirectToAction("Index");
+
             }
-            customer.Id =1;
-
-            if (lastCustomer != null)
-            {
-                customer.Id = lastCustomer.Id + 1;
-            }
-
-            CustomerContext.Customers.Add(customer);
 
 
 
-            return RedirectToAction("Index");
+
+            return View("Create");
         }
         [HttpGet]
         public IActionResult Remove(int id)
