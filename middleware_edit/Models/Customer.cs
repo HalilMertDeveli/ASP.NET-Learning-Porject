@@ -4,6 +4,8 @@ namespace middleware_edit.Models
 {
     public class Customer
     {
+        [Required(ErrorMessage ="Id must have, for adding")]
+        [Range(1,int.MaxValue)]
         public int Id { get; set; }
         [Required(ErrorMessage ="Please Write a name ")]
         [MaxLength(30,ErrorMessage ="Name had only 30 char")]

@@ -38,6 +38,8 @@ namespace middleware_edit.Controllers
             //string lastName = HttpContext.Request.Form["lastName"].ToString();
             //int age = int.Parse(HttpContext.Request.Form["age"].ToString());
 
+            ModelState.Remove("Id");
+
             var controlState = ModelState.IsValid;
             var errors = ModelState.Values.SelectMany(error => error.Errors.Select(stringT =>stringT.ErrorMessage));
 
