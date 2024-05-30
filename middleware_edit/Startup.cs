@@ -39,10 +39,13 @@ namespace middleware_edit
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+
+            app.UseExceptionHandler("/Home/Error");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSession();
@@ -51,6 +54,8 @@ namespace middleware_edit
                 RequestPath = "/node_modules",
                 FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "node_modules"))
             });
+
+            app.UseStatusCodePagesWithReExecute("/Home/Status","?code={0}");
 
             app.UseRouting();
             app.UseMiddleware<RequestEditingMiddleware>();

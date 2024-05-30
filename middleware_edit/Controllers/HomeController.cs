@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using middleware_edit.Filters;
 using middleware_edit.Models;
@@ -111,6 +112,21 @@ namespace middleware_edit.Controllers
             return RedirectToAction("Index");
         }
        
+        public IActionResult Status(int ? code)
+        {
+            return View();
+        }
+
+        public IActionResult Error()
+        {
+            var excaptionHandlerFuture = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+
+            return View();
+        }
+        public IActionResult ErrorForCheck()
+        {
+            throw new System.Exception("There is system error in this line");
+        }
         
 
 

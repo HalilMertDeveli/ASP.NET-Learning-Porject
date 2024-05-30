@@ -19,7 +19,6 @@ C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\middleware_edit.TagHelpers.output.cache
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\middleware_edit.RazorCoreGenerate.cache
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
@@ -137,3 +136,5 @@ C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Areas\Member\Views\Home\Index.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Cookie\Index.cshtml.g.cs
 C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Session\Index.cshtml.g.cs
+C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Home\Status.cshtml.g.cs
+C:\Users\halil\source\repos\database_programming_week_seven\udemy_asp\middleware_edit\middleware_edit\obj\Debug\net5.0\Razor\Views\Home\Error.cshtml.g.cs
