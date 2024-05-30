@@ -31,8 +31,11 @@ namespace middleware_edit
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IConfiguration configuration)
         {
+            var fullName =  configuration.GetSection("Person:FirstName").Value;
+            var lastNAME = configuration.GetSection("Person:LastName").Value;
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
