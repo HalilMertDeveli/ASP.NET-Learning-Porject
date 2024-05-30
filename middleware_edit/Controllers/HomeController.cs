@@ -6,6 +6,7 @@ using middleware_edit.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -121,13 +122,44 @@ namespace middleware_edit.Controllers
         {
             var excaptionHandlerFuture = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
 
+            //we will keep data like this -> 11-02-2024_15-02
+
+            var logFolderPath = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot","loogs");
+
+            DirectoryInfo directoryInfo = new DirectoryInfo(logFolderPath);
+
+            var logFileName = DateTime.Now.ToString();//11/02/2020
+
+            logFileName = logFileName.Replace(" ","_");
+            logFileName = logFileName.Replace(":","-");
+            logFileName = logFileName.Replace("/","-");
+
+            logFileName += ".txt";
+
+            var logFilePath = Path.Combine(logFolderPath,logFileName) ;
+
+            if (!directoryInfo.Exists)
+            {
+                directoryInfo.Create();
+            }
+
+            FileInfo fileInfo = new FileInfo(logFilePath);
+
+            var writer = fileInfo.CreateText();
+
+            writer.WriteLine("where the data has been up :" +excaptionHandlerFuture.Path);
+
+            writer.WriteLine("Error messasge :" + excaptionHandlerFuture.Error.Message);
+
+            writer.Close();
+
             return View();
         }
         public IActionResult ErrorForCheck()
         {
             throw new System.Exception("There is system error in this line");
         }
-        
+
 
 
 
