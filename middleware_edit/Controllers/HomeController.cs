@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using middleware_edit.Filters;
 using middleware_edit.Models;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,7 @@ namespace middleware_edit.Controllers
             return View(new Customer());
         }
         [HttpPost]
+        [ValidFirstName]
         public IActionResult Create(Customer customer)
         {
             //string firstName = HttpContext.Request.Form["firstName"].ToString();
