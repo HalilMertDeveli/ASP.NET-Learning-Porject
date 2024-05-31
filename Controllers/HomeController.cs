@@ -21,12 +21,16 @@ namespace AspNetEntity.Controllers
             //context.Products.Add(new Data.Entities.Product { Name = "Phone", Price = 3400, });
             //context.SaveChanges();
 
-            var willUpdateProduct = context.Products.Find(1);
-            willUpdateProduct.Name = "HMD ss";
-            context.Products.Update(willUpdateProduct);
-            context.SaveChanges();
+            //var willUpdateProduct = context.Products.Find(1);
+            //willUpdateProduct.Name = "HMD ss";
+            //context.Products.Update(willUpdateProduct);
+            //context.SaveChanges();
 
-            
+            //var willDeleteProduct = context.Products.FirstOrDefault(x => x.Id == 1);
+
+            //context.Products.Remove(willDeleteProduct);
+            //context.SaveChanges();
+
 
             return View();
         }
