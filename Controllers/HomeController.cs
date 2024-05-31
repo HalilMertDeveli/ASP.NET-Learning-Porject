@@ -22,7 +22,7 @@ namespace AspNetEntity.Controllers
             //context.SaveChanges();
 
             var willUpdateProduct = context.Products.Find(1);
-            willUpdateProduct.Name = "HMD";
+            willUpdateProduct.Name = "HMD ss";
             context.Products.Update(willUpdateProduct);
             context.SaveChanges();
 
