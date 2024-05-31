@@ -1,3 +1,4 @@
+using AspNetEntity.Data.Contexts;
 using AspNetEntity.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -15,6 +16,18 @@ namespace AspNetEntity.Controllers
 
         public IActionResult Index()
         {
+            UdemyContext context = new UdemyContext();
+
+            //context.Products.Add(new Data.Entities.Product { Name = "Phone", Price = 3400, });
+            //context.SaveChanges();
+
+            var willUpdateProduct = context.Products.Find(1);
+            willUpdateProduct.Name = "HMD";
+            context.Products.Update(willUpdateProduct);
+            context.SaveChanges();
+
+            
+
             return View();
         }
 
