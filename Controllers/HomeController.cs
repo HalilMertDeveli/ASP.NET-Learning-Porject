@@ -1,4 +1,5 @@
 using AspNetEntity.Data.Contexts;
+using AspNetEntity.Data.Entities;
 using AspNetEntity.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -18,18 +19,35 @@ namespace AspNetEntity.Controllers
         {
             UdemyContext context = new UdemyContext();
 
-            //context.Products.Add(new Data.Entities.Product { Name = "Phone", Price = 3400, });
-            //context.SaveChanges();
+            context.Employees.Add(new PartTimeEmployee
+            {
+                DailtWage = 400,
+                FirstName = "part",
+                LastName = "part",
 
-            //var willUpdateProduct = context.Products.Find(1);
-            //willUpdateProduct.Name = "HMD ss";
-            //context.Products.Update(willUpdateProduct);
-            //context.SaveChanges();
+            });
 
-            //var willDeleteProduct = context.Products.FirstOrDefault(x => x.Id == 1);
+            context.Employees.Add(new PartTimeEmployee
+            {
 
-            //context.Products.Remove(willDeleteProduct);
-            //context.SaveChanges();
+                DailtWage = 400,
+                FirstName = "part 2",
+                LastName = "part 2",
+
+            });
+
+            context.Employees.Add(new FullTimeEmployee {
+                FirstName = "full", 
+                LastName = " full",
+                HourlyWage = 60,
+            });
+
+            context.SaveChangesAsync();
+
+            var parts = context.PartTimeEmployees.ToList();
+
+            var parts2 = context.Employees.Where(x => x is PartTimeEmployee).ToList();
+
 
 
             return View();

@@ -12,5 +12,7 @@ namespace AspNetEntity.Data.Entities
         [Required]
         [Column("category_name",TypeName ="nvarchar(100)")]
         public string Name { get; set; }
+
+        public List<ProductCategory> ProductCategories { get; set; }
     }
 }

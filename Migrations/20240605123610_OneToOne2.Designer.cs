@@ -4,6 +4,7 @@ using AspNetEntity.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AspNetEntity.Migrations
 {
     [DbContext(typeof(UdemyContext))]
-    partial class UdemyContextModelSnapshot : ModelSnapshot
+    [Migration("20240605123610_OneToOne2")]
+    partial class OneToOne2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,36 +61,6 @@ namespace AspNetEntity.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("AspNetEntity.Data.Entities.Employee", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Employees");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Employee");
-
-                    b.UseTphMappingStrategy();
-                });
-
             modelBuilder.Entity("AspNetEntity.Data.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -119,24 +92,6 @@ namespace AspNetEntity.Migrations
                         .IsUnique();
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("AspNetEntity.Data.Entities.ProductCategory", b =>
-                {
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoryId1")
-                        .HasColumnType("int");
-
-                    b.HasKey("CategoryId", "ProductId");
-
-                    b.HasIndex("CategoryId1");
-
-                    b.ToTable("ProductCategories");
                 });
 
             modelBuilder.Entity("AspNetEntity.Data.Entities.ProductDetail", b =>
@@ -183,45 +138,6 @@ namespace AspNetEntity.Migrations
                     b.ToTable("SalesHistories");
                 });
 
-            modelBuilder.Entity("AspNetEntity.Data.Entities.FullTimeEmployee", b =>
-                {
-                    b.HasBaseType("AspNetEntity.Data.Entities.Employee");
-
-                    b.Property<decimal>("HourlyWage")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasDiscriminator().HasValue("FullTimeEmployee");
-                });
-
-            modelBuilder.Entity("AspNetEntity.Data.Entities.PartTimeEmployee", b =>
-                {
-                    b.HasBaseType("AspNetEntity.Data.Entities.Employee");
-
-                    b.Property<decimal>("DailtWage")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasDiscriminator().HasValue("PartTimeEmployee");
-                });
-
-            modelBuilder.Entity("AspNetEntity.Data.Entities.ProductCategory", b =>
-                {
-                    b.HasOne("AspNetEntity.Data.Entities.Product", "Product")
-                        .WithMany("ProductCategories")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AspNetEntity.Data.Entities.Category", "Category")
-                        .WithMany("ProductCategories")
-                        .HasForeignKey("CategoryId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("AspNetEntity.Data.Entities.ProductDetail", b =>
                 {
                     b.HasOne("AspNetEntity.Data.Entities.Product", "Product")
@@ -244,15 +160,8 @@ namespace AspNetEntity.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("AspNetEntity.Data.Entities.Category", b =>
-                {
-                    b.Navigation("ProductCategories");
-                });
-
             modelBuilder.Entity("AspNetEntity.Data.Entities.Product", b =>
                 {
-                    b.Navigation("ProductCategories");
-
                     b.Navigation("ProductDetail")
                         .IsRequired();
 
