@@ -6,4 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Data\Entities\" />
+    <Folder Include="Data\Context\" />
+    <Folder Include="Data\Configurations\" />
+  </ItemGroup>
+
 </Project>
