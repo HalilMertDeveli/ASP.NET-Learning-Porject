@@ -1,0 +1,44 @@
+﻿@inject dependecyInversion.Services.ISingletonService _singletonService;
+@inject dependecyInversion.Services.ITransientService _transientService;
+@inject dependecyInversion.Services.IScopedService _scopedService;
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title>AddScoped & AddSingleton & Transient</title>
+
+    </head>
+
+    <body>
+
+        <p>
+            Singleton  = @ViewBag.Singleton
+            <br />
+            Singleton2 = @_singletonService.GuidId
+
+        </p>
+
+        <p>
+            Transient  =  @ViewBag.Transient
+            <br />
+            Transient2 =  @_transientService.GuidId
+
+        </p>
+
+        <p>
+            Scoped  =  @ViewBag.Scoped
+            <br />
+            Scoped2 =  @_scopedService.GuidId
+
+        </p>    
+
+       
+
+       
+
+
+        <p>get data from view bag</p>
+
+    </body>
+
+</html>
